@@ -54,3 +54,5 @@ Route::get('/rolldice/{guess?}', function($guess = 0)
   $data = array('rand' => $rand, 'guess' => $guess, 'message' => $message);
   return View::make('rolldice')->with($data);
 });
+
+Route::resource('posts', 'PostsController');
