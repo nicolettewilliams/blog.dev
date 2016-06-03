@@ -2,6 +2,7 @@
 
 
 @section('content')
+
     <div class="container">
     	<h2>Write a Blog Post!</h2>
 		<form class action="{{{ action('PostsController@store') }}}" method="POST" accept-charset="utf-8">
@@ -17,3 +18,4 @@
   		</form>
     </div>
 @stop
+

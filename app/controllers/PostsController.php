@@ -8,10 +8,10 @@ class PostsController extends \BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{
-		return 'all lists of postings';
-	}
-
+		{		
+		    $posts = Post::paginate(4);
+		    return View::make('posts.index')->with(array('posts' => $posts));
+		}
 
 	/**
 	 * Show the form for creating a new resource.
@@ -20,9 +20,8 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return 'form for creating new posts';
+		return View::make('posts.create');
 	}
-
 
 	/**
 	 * Store a newly created resource in storage.
@@ -31,9 +30,18 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		if(!Input::has('title') && !Input::has('body')){
+			return Redirect::back()->withInput();
+		}else{
+			$post = new Post();
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			$post->save();
+			return Redirect::action('PostsController@index');
+		}
 	}
 
+	
 
 	/**
 	 * Display the specified resource.
@@ -43,9 +51,9 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return 'the posted value is $id';
+		$post  = Post::find($id);
+		return View::make('posts.show')->with('post', $post);
 	}
-
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -53,11 +61,12 @@ class PostsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
 	public function edit($id)
 	{
-		return 'form where you can edit $id';
+		$post = Post::find($id);
+		return View::make('posts.edit')->with('post', $post);
 	}
-
 
 	/**
 	 * Update the specified resource in storage.
@@ -65,11 +74,15 @@ class PostsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
 	public function update($id)
 	{
-		//
+		$post = Post::find($id);
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+		return Redirect::action('PostsController@show', array($id));
 	}
-
 
 	/**
 	 * Remove the specified resource from storage.
@@ -79,8 +92,8 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$post = Post::find($id);
+		$post->delete();
+		return Redirect::action('PostsController@index');
 	}
-
-
 }

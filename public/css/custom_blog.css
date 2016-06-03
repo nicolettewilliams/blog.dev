@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Muli';
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+h2{
+	font-family: 'Lobster', cursive;
+}
+/* unvisited link */
+.navbar-links:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+.navbar-links:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.navbar-links:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+.navbar-links:active {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-title{
+	font-family: 'Amatic SC', cursive;
+	color: white;
+}
+
+.post-title:link{
+	font-size: 20px;
+	color: black;
+}
+.post-title:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.post-title:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* selected link */
+.post-title:active {
+    color: black;
+    text-decoration: none;
+}
+
+.padding{
+	padding-left: 30px;
+}

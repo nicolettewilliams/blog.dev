@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<main>
-	<h1 class="padding">All Of My Posts</h1>
+	<h2 class="padding">All Of My Posts</h2>
     @foreach($posts as $post)
         <article class="padding">
 
@@ -14,5 +13,7 @@
 
         <hr/>
     @endforeach
-</main>
+
+	<div>{{ $posts->links() }}</div>
+
 @stop
