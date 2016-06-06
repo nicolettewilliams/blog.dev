@@ -1,14 +1,9 @@
 @extends('layouts.master')
 
-
-@section('title')
-    <title>Show a Post</title>
-@stop
-
 @section('content')
 <div class="padding">
-    <h1>Showing Post: #{{{$post['id']}}}</h1>
     <h4>{{{ $post['title'] }}}</h4>
+    <img class="img-placeholder" src="http://placehold.it/350x150">
     <p>{{{ $post['body'] }}}</p>
 </div>
 @stop

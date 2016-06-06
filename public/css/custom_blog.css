@@ -7,10 +7,17 @@ body {
 
   main {
     flex: 1 0 auto;
+    font-family: 'Muli';
   }
 
-h2{
+.img-placeholder{
+	padding-bottom: 30px;
+}
+
+.titles{
 	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	color: DarkViolet;
 }
 /* unvisited link */
 .navbar-links:link {

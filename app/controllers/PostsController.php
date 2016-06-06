@@ -1,17 +1,16 @@
 <?php
-
 class PostsController extends \BaseController {
-
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+
 	public function index()
-		{		
-		    $posts = Post::paginate(4);
-		    return View::make('posts.index')->with(array('posts' => $posts));
-		}
+	{
+		$posts = Post::paginate(4);
+		return View::make('posts.index')->with(array('posts' => $posts));
+	}
 
 	/**
 	 * Show the form for creating a new resource.
@@ -30,18 +29,24 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		if(!Input::has('title') && !Input::has('body')){
-			return Redirect::back()->withInput();
-		}else{
-			$post = new Post();
+		// create the validator
+	    $validator = Validator::make(Input::all(), Post::$rules);
+	    // attempt validation
+	    if ($validator->fails()) {
+	        // validation failed, redirect to the post create page with validation errors and old inputs
+	        Session::flash('errorMessage', 'Your new post was not successfully created. See errors below:');
+	        return Redirect::back()->withInput()->withErrors($validator);
+	    } else {
+	        // validation succeeded, create and save the post
+	        $post = new Post();
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
+			// change to use uploaded image path and save image in img folder
 			$post->save();
+			Session::flash('successMessage', 'Your new post titled "' . $post->title . '" was successfully created.');
 			return Redirect::action('PostsController@index');
-		}
+	    }
 	}
-
-	
 
 	/**
 	 * Display the specified resource.
@@ -51,7 +56,7 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$post  = Post::find($id);
+		$post = Post::find($id);
 		return View::make('posts.show')->with('post', $post);
 	}
 
@@ -61,7 +66,6 @@ class PostsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-
 	public function edit($id)
 	{
 		$post = Post::find($id);
@@ -74,14 +78,25 @@ class PostsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-
 	public function update($id)
 	{
-		$post = Post::find($id);
-		$post->title = Input::get('title');
-		$post->body = Input::get('body');
-		$post->save();
-		return Redirect::action('PostsController@show', array($id));
+		// create the validator
+	    $validator = Validator::make(Input::all(), Post::$rules);
+	    // attempt validation
+	    if ($validator->fails()) {
+	        // validation failed, redirect to the post create page with validation errors and old inputs
+	        Session::flash('errorMessage', 'The update was unsuccessful. See errors below:');
+	        return Redirect::back()->withInput()->withErrors($validator);
+	    } else {
+			$post = Post::find($id);
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			//need to add in file upload and chance this
+			$post->img_url = 'http://lorempixel.com/900/300/animals';
+			$post->save();
+			Session::flash('successMessage', 'Your post titled "' . $post->title . '" was successfully updated.');
+			return Redirect::action('PostsController@show', array($id));
+		}
 	}
 
 	/**
@@ -94,6 +109,7 @@ class PostsController extends \BaseController {
 	{
 		$post = Post::find($id);
 		$post->delete();
+		Session::flash('successMessage', 'Your post titled "' . $post->title . '" was successfully deleted.');
 		return Redirect::action('PostsController@index');
 	}
 }

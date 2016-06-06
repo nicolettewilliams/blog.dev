@@ -3,19 +3,34 @@
 
 @section('content')
 
+	{{-- show errors in alert box --}}
+	@if (Session::has('errorMessage'))
+	    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+	@endif
+	@if($errors->has())
+
+		<div class="alert alert-danger" role="alert">
+			<ul>
+				@foreach($errors->all() as $error)
+					<li>{{ $error }}</li>
+				@endforeach
+			</ul>
+		</div>
+	@endif
+
     <div class="container">
-    	<h2>Write a Blog Post!</h2>
-		<form class action="{{{ action('PostsController@store') }}}" method="POST" accept-charset="utf-8">
+    	<p class="padding titles">Write a Blog Post!</p>
+    	{{ Form::open(array('action' => 'PostsController@store')) }}
 				<div>
-					<input type="text" name="title" value="{{{ Input::old('title') }}}" placeholder="Post Title">
+					{{ Form::text('title', null, ['class' => 'form-control' , 'placeholder' => 'Post Title']) }}
 				</div>
 				<div>
-					<textarea name="body" class="materialize-textarea"  placeholder="Post Content">{{{ Input::old('body') }}}</textarea>
+					{{ Form::textarea('body', null, ['class' => 'materialize-textarea' , 'placeholder' => 'Post Content']) }}
 				</div>
-			<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			<button class="btn  purple darken-3" type="submit" name="action">Submit
     			<i class="material-icons right">send</i>
-  			</button>		
-  		</form>
+  			</button>			
+  		{{ Form::close() }}
     </div>
 @stop
 
