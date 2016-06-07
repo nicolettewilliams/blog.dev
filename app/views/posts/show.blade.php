@@ -3,17 +3,8 @@
 @section('content')
 <div class="padding">
     <p class="titles">{{{ $post['title'] }}}</p>
-    <p>Written by: {{{$post->user->username}}}</p>
+	<p><span class="glyphicon glyphicon-time"></span>  {{ $post->created_at->setTimezone('America/Chicago')->diffForHumans() }} by {{ $post->user->firstname }} {{ $post->user->lastname }}</p>
 
-    <p>
-    	{{ 
-            $post
-
-                ->created_at
-                ->setTimezone('America/Chicago')
-                ->diffForHumans()
-        }}
-	</p>
 		<img class="img-resize float-left" src="{{{$post->img_url}}}" alt="">
 	    <p class="show-body">{{{ $post['body'] }}}</p>
 	<div>

@@ -26,10 +26,11 @@ class HomeController extends BaseController {
 	}
 	public function doLogin()
 	{
+
 		$email = Input::get('email');
 		$password = Input::get('password');
 		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
-		    return Redirect::intended('/');
+		    return Redirect::intended('/posts');
 		} else {
 			Session::flash('errorMessage', 'Incorrect email or password. Please try again.');
 		    return Redirect::action('HomeController@showLogin');
@@ -40,7 +41,7 @@ class HomeController extends BaseController {
 	public function doLogout()
 	{
 		Auth::logout();
-		return Redirect::to('/');
+		return Redirect::to('login');
 	}
 
 }

@@ -4,10 +4,14 @@
       <a href="{{{ action('PostsController@index') }}}" class="brand-logo blog-title navbar-links"><span class="padding">It's A Blog, Dude!</span></a>
       <ul class="right hide-on-med-and-down">
 
-      	<a class="btn purple btn-xs darken-3" href="/login">Login</a>
-
+      <li><a class="navbar-links" href="/login">Login</a></li>
+      <li><a class="navbar-links" href="{{ URL::to('logout') }}">Logout</a></li>
       <li><a class="navbar-links" href="{{{ action('PostsController@create') }}}">Write a Post!</a></li>
+
+	{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->firstname }}}
+
       </ul>
+
    </div>
 </nav>
 
