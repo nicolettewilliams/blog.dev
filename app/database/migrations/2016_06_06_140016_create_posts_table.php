@@ -15,11 +15,11 @@ class CreatePostsTable extends Migration {
 		Schema::create('posts', function($table)
         {
             $table->increments('id');
-            $table->string('title');
-            $table->string('body');
-            $table->rememberToken();
-            $table->timestamps();
-        });	}
+			$table->string('title', 100);
+			$table->text('body');
+			$table->timestamps();
+			$table->string('img_url')->nullable();        
+		});	}
 
 	/**
 	 * Reverse the migrations.

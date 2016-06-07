@@ -1,22 +1,27 @@
 @extends('layouts.master')
 
-
 @section('content')
 
 <div class="container">
-	<p class="padding titles">Edit Your Blog Post!</p>
-	<div class="form-group @if($errors->has('title')) has-error @endif">
-		{{ Form::text('title', null, ['class' => 'form-control' , 'placeholder' => 'Post Title']) }}
+	<p class="titles">Edit Post: "{{ $post->title }}" !</p>
+	<p>Edit this post below, or <a href="{{ route('posts.index') }}"> go back to all posts.</a></p>
+
+	{{ Form::model($post, [
+	    'method' => 'PATCH',
+	    'route' => ['posts.update', $post->id]
+	]) }}
+
+	<div class="form-group">
+	    {{ Form::text('title', null, ['class' => 'form-control' , 'placeholder' => 'Post Title']) }}
 	</div>
 
-	<div class="form-group @if($errors->has('body')) has-error @endif">
-		{{ Form::textarea('body', null, ['class' => 'materialize-textarea' , 'placeholder' => 'Post Content']) }}
+	<div class="form-group">
+	    {{ Form::textarea('body', null, ['class' => 'materialize-textarea' , 'placeholder' => 'Post Content']) }}
 	</div>
 
-	<button class="btn  purple darken-3" type="submit" name="action">Submit
-		<i class="material-icons right">send</i>
-	</button>
+	{{ Form::submit('Update Post', ['class' => 'btn  purple darken-3']) }}
+
+	{{ Form::close() }}
+
 </div>
-
-
 @stop

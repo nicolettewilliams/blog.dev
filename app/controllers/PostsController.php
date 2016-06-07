@@ -34,16 +34,22 @@ class PostsController extends \BaseController {
 	    // attempt validation
 	    if ($validator->fails()) {
 	        // validation failed, redirect to the post create page with validation errors and old inputs
-	        Session::flash('errorMessage', 'Your new post was not successfully created. See errors below:');
+	        Session::flash('errorMessage', 'Your new post couldn\'t be created. See errors below:');
 	        return Redirect::back()->withInput()->withErrors($validator);
 	    } else {
 	        // validation succeeded, create and save the post
+
+	        $file = Input::file('img_url');
+	    	$destinationPath = public_path() . '/img';
+	    	$filename = $file->getClientOriginalName();
+	    	Input::file('img_url')->move($destinationPath, $filename);
+
 	        $post = new Post();
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
-			// change to use uploaded image path and save image in img folder
+	    	$post->img_url = $filename;
 			$post->save();
-			Session::flash('successMessage', 'Your new post titled "' . $post->title . '" was successfully created.');
+			Session::flash('successMessage', 'Your new post: "' . $post->title . '" was successfully created.');
 			return Redirect::action('PostsController@index');
 	    }
 	}
@@ -91,10 +97,9 @@ class PostsController extends \BaseController {
 			$post = Post::find($id);
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
-			//need to add in file upload and chance this
-			$post->img_url = 'http://lorempixel.com/900/300/animals';
+			$post->img_url = Input::get('img_url');
 			$post->save();
-			Session::flash('successMessage', 'Your post titled "' . $post->title . '" was successfully updated.');
+			Session::flash('successMessage', 'Your post "' . $post->title . '" was successfully updated.');
 			return Redirect::action('PostsController@show', array($id));
 		}
 	}
