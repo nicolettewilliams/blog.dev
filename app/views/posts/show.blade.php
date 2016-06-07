@@ -22,7 +22,9 @@
 	        'method' => 'DELETE',
 	        'route' => ['posts.destroy', $post->id]
 	    ]) }}
+
 	        {{ Form::submit('DELETE', ['class' => 'btn purple darken-3']) }}
+	        
 	    {{ Form::close() }}
 	</div>
 

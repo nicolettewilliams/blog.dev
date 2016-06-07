@@ -20,7 +20,7 @@
 		    {{ Form::textarea('body', null, ['class' => 'materialize-textarea' , 'placeholder' => 'Post Content']) }}
 		</div>
 
-		<div class="@if($errors->has('img_url')) has-error @endif">
+		<div>
 		    {{ Form::label('img_url', '*Image') }}
 		    {{ Form::file('img_url') }}
 		</div>
