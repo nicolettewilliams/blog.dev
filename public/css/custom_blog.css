@@ -21,6 +21,16 @@ body {
     padding-bottom: 20px;
     margin: 0px;
 }
+
+nav .brand-logo{
+    font-size: 4rem;
+    position: relative;
+}
+
+.lizard{
+    margin-right: 5px;
+}
+
 /* unvisited link */
 .navbar-links:link {
     color: white;
@@ -51,28 +61,32 @@ body {
 }
 
 .post-title:link{
-	font-size: 20px;
-	color: black;
+	font-size: 30px;
+	color: darkViolet;
+    font-family: 'Luckiest Guy', cursive;
 }
 .post-title:visited {
-    color: black;
+    color: darkViolet;
     text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 /* mouse over link */
 .post-title:hover {
-    color: black;
+    color: darkViolet;
     text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 /* selected link */
 .post-title:active {
-    color: black;
+    color: darkViolet;
     text-decoration: none;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .padding{
-	padding-left: 30px;
+	padding-left: 50px;
 }
 
 .back-to-home{
@@ -98,3 +112,31 @@ body {
 .submit{
     margin-top: 20px;
 }
+
+.dropdown-btn{
+    margin-right: 40px;
+    border: none;
+    letter-spacing: none;
+    text-transform: none;
+    box-shadow: none;
+}
+
+.btn:hover, .btn:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.current-photo{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: DarkViolet;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.img-resize-edit{
+    width: 200px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+    /* -webkit-tap-highlight-color: transparent; */

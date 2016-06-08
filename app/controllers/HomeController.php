@@ -26,7 +26,6 @@ class HomeController extends BaseController {
 	}
 	public function doLogin()
 	{
-
 		$email = Input::get('email');
 		$password = Input::get('password');
 		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
@@ -42,6 +41,26 @@ class HomeController extends BaseController {
 	{
 		Auth::logout();
 		return Redirect::to('login');
+	}
+
+	public function showSignup() {
+	   return View::make('posts.signup');
+	}
+
+	public function doSignup() {
+		$username = Input::get('username');
+		$firstname = Input::get('firstname');
+		$lastname = Input::get('lastname');
+	   	$email = Input::get('email');
+		$password = Input::get('password');
+		if (Auth::attempt(array('username' => $username, 
+								'firstname' => $firstname, 
+								'lastname' => $lastname, 
+								'email' => $email, 
+								'password' => $password))) {
+			return Redirect::intended('/posts');
+		}
+
 	}
 
 }

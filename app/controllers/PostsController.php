@@ -19,6 +19,13 @@ class PostsController extends \BaseController {
 		return View::make('posts.index')->with(array('posts' => $posts));
 	}
 
+	// public function view_post($id){
+	//     $user = User::find($id);
+	//     $posts = $user->posts()->get();
+
+	//     return View::make("posts.view")->with(array("user" => $user, "posts" => $posts));
+	// }
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -45,19 +52,25 @@ class PostsController extends \BaseController {
 	        return Redirect::back()->withInput()->withErrors($validator);
 	    } else {
 	        // validation succeeded, create and save the post
-
-	        $file = Input::file('img_url');
-	    	$destinationPath = public_path() . '/img';
-	    	$filename = $file->getClientOriginalName();
-	    	Input::file('img_url')->move($destinationPath, $filename);
-
 	        $post = new Post();
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
-	    	$post->img_url = $filename;
+			$post->user_id = Auth::id();
 			$post->save();
-			Session::flash('successMessage', 'Your new post: "' . $post->title . '" was successfully created.');
-			return Redirect::action('PostsController@index');
+
+			if($post->save()){
+				if(Input::hasFile('img')) {
+					$img = Input::file('img');
+					$imgName = $post->id . '.' . $img->getClientOriginalExtension();
+					$systemPath = public_path() . '/img';
+					$img->move($systemPath , $imgName);
+					$post->img_url = '/img/' . $imgName;
+					$post->save();
+				}
+				Session::flash('successMessage', 'Your new post: "' . $post->title . '" was successfully created.');
+				return Redirect::action('PostsController@index');
+			}
+
 	    }
 	}
 
@@ -92,25 +105,30 @@ class PostsController extends \BaseController {
 	 * @return Response
 	 */
 	public function update($id)
-	{
-		// create the validator
-	    $validator = Validator::make(Input::all(), Post::$rules);
-	    // attempt validation
-	    if ($validator->fails()) {
-	        // validation failed, redirect to the post create page with validation errors and old inputs
-	        Session::flash('errorMessage', 'The update was unsuccessful. See errors below:');
-	        return Redirect::back()->withInput()->withErrors($validator);
-	    } else {
-			$post = Post::find($id);
-			$post->title = Input::get('title');
-			$post->body = Input::get('body');
-			$post->img_url = Input::get('img_url');
-			$post->save();
-			Session::flash('successMessage', 'Your post "' . $post->title . '" was successfully updated.');
-			return Redirect::action('PostsController@show', array($id));
-		}
-	}
-
+    {
+        $post = Post::find($id);
+        $post->title = Input::get('title');
+        $post->body = Input::get('body');
+        // create the validator
+        $validator = Validator::make(Input::all(), Post::$rules);
+        // attempt validation
+        if ($validator->fails()) {
+            // validation failed, redirect to the post create page with validation errors and old inputs
+            Session::flash('errorMessage', 'The update was unsuccessful. See errors below:');
+            return Redirect::back()->withInput()->withErrors($validator);
+        } else {
+            if(Input::hasFile('img')) {
+                $img = Input::file('img');
+                $imgName = $post->id . '.' . $img->getClientOriginalExtension();
+                $systemPath = public_path() . '/img';
+                $img->move($systemPath , $imgName);
+                $post->img_url = '/img/' . $imgName;
+            }
+            $post->save();
+            Session::flash('successMessage', 'Your post "' . $post->title . '" was successfully updated.');
+            return Redirect::action('PostsController@show', array($id));
+        }
+    }
 	/**
 	 * Remove the specified resource from storage.
 	 *

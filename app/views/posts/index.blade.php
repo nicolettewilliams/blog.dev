@@ -10,11 +10,11 @@
         <article class="padding">
             <h3><a href="{{{ action('PostsController@show', $post->id) }}}" class="post-title">{{{$post->title}}}</a></h3>
             <p><span class="glyphicon glyphicon-time"></span>  {{ $post->created_at->setTimezone('America/Chicago')->diffForHumans() }} by {{ $post->user->firstname }} {{ $post->user->lastname }}</p>
-            
-            <p class="show-body">{{ str_limit($post->body, $limit = 100, $end = '...') }}</p>
+
+            <p class="show-body">{{ str_limit($post->body, $limit = 75, $end = '...') }}</p>
 
             @if(!empty($post->img_url))
-                <img class="img-resize" src="{{{$post->img_url}}}" alt="blog post image">
+                <a href="{{{ action('PostsController@show', $post->id) }}}"><img class="img-resize" src="{{{$post->img_url}}}" alt="blog post image"></a>
                 <hr>
             @endif
 

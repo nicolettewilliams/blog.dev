@@ -4,10 +4,11 @@
 @section('content')
 
     <div class="container">
+    	@if(Auth::check())
     	<p class="titles">Write a Blog Post!</p>
     	@include('partials.alerts.errors')
 
-		{{ Form::open(['route' => 'posts.store', 'files' => true]) }}
+		{{ Form::open(['route' => 'posts.store', 'enctype' => 'multipart/form-data']) }}
 
 		<div>
 		    {{ Form::text('title', null, ['class' => 'form-control' , 'placeholder' => 'Post Title']) }}
@@ -18,13 +19,16 @@
 		</div>
 
 		<div>
-		    {{ Form::file('image[]',['multiple']) }}
-			{{$errors->first('image','<p>:message</p>') }}
+			{{ Form::file('img', array('class' => 'form-controll')); }}
 		</div>
 
 		{{ Form::submit('Submit Post!', ['class' => 'btn  purple darken-3 submit']) }}
 
 		{{ Form::close() }}
+		@else
+		<p class="titles">You must be logged in to create a post</p>
+		@endif
+
     </div>
 @stop
 		

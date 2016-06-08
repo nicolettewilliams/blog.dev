@@ -12,7 +12,6 @@ class Post extends BaseModel
 	public static $rules = [
 		'title' 	=> 'required',
 		'body'		=> 'required',
-		'img_url'	=> 'required'
 	];
 }
 
