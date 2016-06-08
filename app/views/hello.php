@@ -45,7 +45,7 @@
                   </div>
 
                   <div class="row">
-                     <a href="/resume.html" class="col-lg-3 col-xs-6 no-padding green center-4em">
+                     <a href="/" class="col-lg-3 col-xs-6 no-padding green center-4em">
                         <span class="fa fa-home icon"></span>
                         <span class="small-text icon-text">home</span>
                      </a>
@@ -91,7 +91,7 @@
             <p class="center-4em titles-and-content personal-info-title">personal info</p>
             <p class="personal-info"><span class="info-title">name:    nicolette williams</span></p>
             <p class="personal-info"><span class="info-title">cell:    210.605.4797</span></p>
-            <p class="personal-info"><span class="info-title">email:    nicolette.williams8@icloud.com</span></p>
+            <p class="personal-info"><span class="info-title">email: nicolette.williams8@icloud.com</span></p>
          </div>
       </div>
 
