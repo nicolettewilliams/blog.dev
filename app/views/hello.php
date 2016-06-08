@@ -90,8 +90,8 @@
          <div class="col-lg-4 no-padding">
             <p class="center-4em titles-and-content personal-info-title">personal info</p>
             <p class="personal-info"><span class="info-title">name:    nicolette williams</span></p>
-            <p class="personal-info"><span class="info-title">cell:    888.888.8888</span></p>
-            <p class="personal-info"><span class="info-title">email:    email@email.email</span></p>
+            <p class="personal-info"><span class="info-title">cell:    210.605.4797</span></p>
+            <p class="personal-info"><span class="info-title">email:    nicolette.williams8@icloud.com</span></p>
          </div>
       </div>
 
