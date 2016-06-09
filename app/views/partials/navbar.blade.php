@@ -1,7 +1,7 @@
        
 <nav>
    	<div class="nav-wrapper grey darken-3">
-      	<span class="padding"><i class="fa fa-hand-lizard-o brand-logo lizard" aria-hidden="true"></i>
+      	<span class="padding"><i class="fa fa-hand-lizard-o brand-logo" aria-hidden="true"></i></span>
       	<a href="{{{ action('PostsController@index') }}}" class="brand-logo blog-title navbar-links"><span>It's A Blog, Dude!</span></a>
       	<ul class="right hide-on-med-and-down">
 

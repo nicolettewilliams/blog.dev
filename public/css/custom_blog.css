@@ -24,12 +24,7 @@ body {
 
 .brand-logo{
     font-size: 4rem;
-    position: relative;
-}
-
-
-.lizard{
-    margin-right: 5px;
+    position: absolute;
 }
 
 /* unvisited link */
