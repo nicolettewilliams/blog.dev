@@ -9,10 +9,10 @@
       	@if(Auth::check())
             <a class='dropdown-button btn grey darken-3' href='#' data-activates='dropdown1'>Hello, {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->firstname }}} </a>
             <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="{{{ action('PostsController@create') }}}">Write a Post!</a></li>
-                <li><a href="#">All of Your Posts</a></li>
+                <li><a class="purple-text" href="{{{ action('PostsController@create') }}}">Write a Post!</a></li>
+                <li><a class="purple-text" href="#">All of Your Posts</a></li>
                 <li class="divider"></li>
-                <li><a href="{{ URL::to('logout') }}">Logout</a></li>
+                <li><a class="purple-text" href="{{ URL::to('logout') }}">Logout</a></li>
             </ul>
         @else
             <li>{{ HTML::link('/login', 'Log In', ['class' => 'navbar-links']) }}</li>   

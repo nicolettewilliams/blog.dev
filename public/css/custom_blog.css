@@ -22,10 +22,11 @@ body {
     margin: 0px;
 }
 
-nav .brand-logo{
+.brand-logo{
     font-size: 4rem;
     position: relative;
 }
+
 
 .lizard{
     margin-right: 5px;
@@ -114,7 +115,7 @@ nav .brand-logo{
     margin-top: 20px;
 }
 
-.dropdown-btn{
+.dropdown-button{
     margin-right: 40px;
     border: none;
     letter-spacing: none;
@@ -122,9 +123,9 @@ nav .brand-logo{
     box-shadow: none;
 }
 
-.btn:hover, .btn:focus {
-    color: white;
-    text-decoration: none;
+.purple-text{
+    color: DarkViolet !important;
+    font-size: 10px;
 }
 
 .current-photo{
