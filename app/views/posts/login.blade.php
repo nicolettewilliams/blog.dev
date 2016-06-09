@@ -17,7 +17,7 @@
             <label class="control-label" for="password">Password</label>
             {{ Form::password('password', null, ['class' => 'form-control']) }}
         </div>
-        <button class="btn purple darken-3 btn-xs" >Login</button>
+        <button class="btn purple darken-3 submit" >Login</button>
     {{ Form::close() }}
 </div>
 @stop

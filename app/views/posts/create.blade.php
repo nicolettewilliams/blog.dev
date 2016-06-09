@@ -6,6 +6,7 @@
     <div class="container">
     	@if(Auth::check())
     	<p class="titles">Write a Blog Post!</p>
+    	<p>Create a post, or <a href="{{ route('posts.index') }}"> go back to all posts.</a></p>
     	@include('partials.alerts.errors')
 
 		{{ Form::open(['route' => 'posts.store', 'enctype' => 'multipart/form-data']) }}

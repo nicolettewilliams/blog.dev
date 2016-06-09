@@ -1,13 +1,13 @@
        
 <nav>
-   	<div class="nav-wrapper grey darken-3">
+   	<div class="nav-wrapper purple darken-3">
       	<span class="padding"><i class="fa fa-hand-lizard-o brand-logo" aria-hidden="true"></i></span>
       	<a href="{{{ action('PostsController@index') }}}" class="brand-logo blog-title navbar-links"><span>It's A Blog, Dude!</span></a>
       	<ul class="right hide-on-med-and-down">
 
 
       	@if(Auth::check())
-            <a class='dropdown-button btn grey darken-3' href='#' data-activates='dropdown1'>Hello, {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->firstname }}} </a>
+            <a class='dropdown-button btn purple darken-3' href='#' data-activates='dropdown1'>Hello, {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->firstname }}} </a>
             <ul id='dropdown1' class='dropdown-content'>
                 <li><a class="purple-text" href="{{{ action('PostsController@create') }}}">Write a Post!</a></li>
                 <li><a class="purple-text" href="#">All of Your Posts</a></li>

@@ -26,7 +26,7 @@
 	</div>
 
 
-	{{ Form::submit('Update Post', ['class' => 'btn  purple darken-3']) }}
+	{{ Form::submit('Update Post', ['class' => 'btn  purple darken-3 submit']) }}
 
 	{{ Form::close() }}
 

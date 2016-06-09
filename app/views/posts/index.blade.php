@@ -2,14 +2,16 @@
 
 @section('content')
 
-	<p class="padding titles">All Of My Posts</p>
+<div class="container center">
+
+    <p class="padding titles">All Of My Posts</p>
     @if (Session::has('successMessage'))
         <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
     @endif
     @foreach($posts as $post)
-        <article class="padding">
+        <article>
             <h3><a href="{{{ action('PostsController@show', $post->id) }}}" class="post-title">{{{$post->title}}}</a></h3>
-            <p><span class="glyphicon glyphicon-time"></span>  {{ $post->created_at->setTimezone('America/Chicago')->diffForHumans() }} by {{ $post->user->firstname }} {{ $post->user->lastname }}</p>
+            <p class="post-by"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $post->created_at->setTimezone('America/Chicago')->diffForHumans() }} by {{ $post->user->firstname }} {{ $post->user->lastname }}</p>
 
             <p class="show-body">{{ str_limit($post->body, $limit = 75, $end = '...') }}</p>
 
@@ -21,6 +23,7 @@
         </article>
     @endforeach
 
-	<div class="padding">{{ $posts->links() }}</div>
+    <div class="pagination">{{ $posts->links() }}</div>
 
+</div>
 @stop

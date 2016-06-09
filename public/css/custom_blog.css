@@ -3,12 +3,26 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Muli';
-  }
+    background: url(/img/dark_embroidery.png) center fixed;
+    padding: 0px !important;
+}
 
-  main {
+main {
     flex: 1 0 auto;
     font-family: 'Muli';
-  }
+}
+
+.container{
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.post-by{
+    font-weight: bolder;
+}
 
 .img-placeholder{
 	padding-bottom: 30px;
@@ -16,10 +30,11 @@ body {
 
 .titles{
 	font-family: 'Lobster', cursive;
-	font-size: 50px;
+	font-size: 60px;
 	color: #9400D3;
-    padding-bottom: 20px;
+    padding-top: 20px;
     margin: 0px;
+    text-align: center;
 }
 
 .brand-logo{
@@ -57,28 +72,25 @@ body {
 }
 
 .post-title:link{
-	font-size: 30px;
-	color: darkViolet;
+	font-size: 40px;
+    color: #9400D3;
     font-family: 'Luckiest Guy', cursive;
 }
 .post-title:visited {
-    color: darkViolet;
+    color: #9400D3;
     text-decoration: none;
-    font-family: 'Luckiest Guy', cursive;
 }
 
 /* mouse over link */
 .post-title:hover {
-    color: darkViolet;
+    color: #9400D3;
     text-decoration: none;
-    font-family: 'Luckiest Guy', cursive;
 }
 
 /* selected link */
 .post-title:active {
-    color: darkViolet;
+    color: #9400D3;
     text-decoration: none;
-    font-family: 'Luckiest Guy', cursive;
 }
 
 .padding{
@@ -88,6 +100,7 @@ body {
 
 .back-to-home{
     padding-top: 20px;
+    padding-bottom: 30px
 }
 
 .float-left{
@@ -96,7 +109,6 @@ body {
 }
 
 .show-body{
-    width: 1000px; 
     word-wrap: break-word;
 }
 
@@ -108,6 +120,8 @@ body {
 
 .submit{
     margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .dropdown-button{
@@ -119,14 +133,14 @@ body {
 }
 
 .purple-text{
-    color: DarkViolet !important;
+   color: #9400D3;
     font-size: 10px;
 }
 
 .current-photo{
     font-family: 'Lobster', cursive;
     font-size: 30px;
-    color: DarkViolet;
+    color: #9400D3;
     padding-bottom: 0px;
     margin: 0px;
 }
@@ -140,4 +154,15 @@ body {
 .signup{
     margin-right: 40px;
 }
-    /* -webkit-tap-highlight-color: transparent; */
+
+.center{
+    text-align: center;
+}
+
+.pagination li.active {
+    background-color: #9400D3;
+}
+
+.pagination{
+    padding-bottom: 5px;
+}
