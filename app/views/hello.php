@@ -35,7 +35,7 @@
                       <div class="col-lg-9 col-xs-12 title full-stack-title full-stack-row" id="full_stack_title">
                            Web Developer
                      </div>
-                     
+
                      <div class="col-lg-3 no-padding light-gray download visible-lg">
                         <a href="resume.php">
                         <span class="fa fa-download center-4em icon"></span>
@@ -62,9 +62,9 @@
                      </a>
 
                      <div class="col-lg-3 col-xs-6 no-padding orange center-4em">
-                        <a href="/contact_page.html" class="hidden-xs">
-                           <span class="fa fa-phone icon"></span>
-                           <p class="small-text icon-text">contact</p>
+                        <a href="/posts" class="hidden-xs">
+                           <span class="fa fa-edit icon"></span>
+                           <p class="small-text icon-text">blog</p>
                         </a>
 
                         <a href="tel:210-605-4797" class="visible-xs">
