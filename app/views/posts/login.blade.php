@@ -5,9 +5,7 @@
 
 <div class="container">
     <p class="titles">Log In!</p>
-    @if (Session::has('errorMessage'))
-        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-    @endif
+    @include('partials.alerts.errors')
     {{ Form::open(array('action' => 'HomeController@doLogin')) }}
         <div class="form-group">
             <label class="control-label" for="email">Email</label>

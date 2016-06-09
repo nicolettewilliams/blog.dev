@@ -15,7 +15,7 @@
                 <li><a class="purple-text" href="{{ URL::to('logout') }}">Logout</a></li>
             </ul>
         @else
-            <li>{{ HTML::link('/login', 'Log In', ['class' => 'navbar-links']) }}</li>   
+            <li>{{ HTML::link('/login', 'Log In', ['class' => 'navbar-links loginbut']) }}</li>   
         @endif
 
 
