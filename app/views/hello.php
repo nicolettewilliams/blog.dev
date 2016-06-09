@@ -63,7 +63,7 @@
 
                      <div class="col-lg-3 col-xs-6 no-padding orange center-4em">
                         <a href="/posts" class="hidden-xs">
-                           <span class="fa fa-edit icon"></span>
+                           <span class="fa fa-hand-spock-o icon"></span>
                            <p class="small-text icon-text">blog</p>
                         </a>
 
