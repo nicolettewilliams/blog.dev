@@ -57,6 +57,10 @@ Route::get('/rolldice/{guess?}', function($guess = 0)
 
 Route::resource('posts', 'PostsController');
 
+Route::get('/my_posts/{id}' , 'PostsController@myPosts');
+
+Route::get('/user_posts/{id}' , 'PostsController@userPosts');
+
 Route::get('login', 'HomeController@showLogin');
 
 Route::post('login', 'HomeController@doLogin');

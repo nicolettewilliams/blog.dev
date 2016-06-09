@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <p class="titles">{{{ $post['title'] }}}</p>
+    @include('partials.alerts.errors')
     @if (Session::has('successMessage'))
         <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
     @endif
@@ -13,7 +14,9 @@
 		
 	    <p class="show-body">{{{ $post['body'] }}}</p>
 	<div>
+	@if($post->user_id == Auth::user()->id)
 	<button class="btn purple darken-3 float-left submit"><a class="navbar-links" href="{{ route('posts.edit', $post->id) }}">EDIT</a></button>
+	@endif
 	    {{ Form::open([
 	        'method' => 'DELETE',
 	        'route' => ['posts.destroy', $post->id]

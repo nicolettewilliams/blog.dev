@@ -84,13 +84,15 @@ main {
 /* mouse over link */
 .post-title:hover {
     color: #9400D3;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-/* selected link */
-.post-title:active {
+.user-posts:link{
     color: #9400D3;
-    text-decoration: none;
+}
+
+.user-posts:visited{
+    color: #9400D3;
 }
 
 .padding{
@@ -165,4 +167,14 @@ main {
 
 .pagination{
     padding-bottom: 5px;
+}
+
+.error{
+    background-color: #ff9999;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 7px;
+    color: #b30000;
+    box-shadow: inset 0 0 10px #b30000;
 }

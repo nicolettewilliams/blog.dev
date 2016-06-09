@@ -19,12 +19,17 @@ class PostsController extends \BaseController {
 		return View::make('posts.index')->with(array('posts' => $posts));
 	}
 
-	// public function view_post($id){
-	//     $user = User::find($id);
-	//     $posts = $user->posts()->get();
+	public function myPosts($id)
+	{
+		$posts = Post::where('user_id', $id)->paginate(4);
+		return View::make('posts.my_posts')->with(array('posts' => $posts));
+	}
 
-	//     return View::make("posts.view")->with(array("user" => $user, "posts" => $posts));
-	// }
+	public function userPosts($id)
+	{
+		$posts = Post::where('user_id', $id)->paginate(4);
+		return View::make('posts.user_posts')->with(array('posts' => $posts));
+	}
 
 	/**
 	 * Show the form for creating a new resource.
@@ -48,7 +53,7 @@ class PostsController extends \BaseController {
 	    // attempt validation
 	    if ($validator->fails()) {
 	        // validation failed, redirect to the post create page with validation errors and old inputs
-	        Session::flash('errorMessage', 'Your new post couldn\'t be created. See errors below:');
+	        Session::flash('errorMessage', '* Required Fields');
 	        return Redirect::back()->withInput()->withErrors($validator);
 	    } else {
 	        // validation succeeded, create and save the post
@@ -95,7 +100,11 @@ class PostsController extends \BaseController {
 	public function edit($id)
 	{
 		$post = Post::find($id);
-		return View::make('posts.edit')->with('post', $post);
+		if($post->user_id == Auth::user()->id){
+			return View::make('posts.edit')->with('post', $post);
+		}
+		Session::flash('errorMessage', 'You do not have permission to edit this post.');
+        return View::make('posts.show')->with('post', $post);
 	}
 
 	/**

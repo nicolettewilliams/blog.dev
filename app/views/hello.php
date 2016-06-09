@@ -32,9 +32,16 @@
                   </div>
 
                   <div class="row">
-                     <div class="col-lg-9 col-xs-12 title full-stack-title full-stack-row" id="full_stack_title">
-                           Web Developer
-                     </div>
+                      <section class="cd-intro">
+                     <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
+                        <span>Web </span>
+                        <span class="cd-words-wrapper">
+                           <b class="is-visible">Designer</b>
+                           <b>Developer</b>
+                        </span>
+                     </h4>
+                  </section>
+
 
                      <div class="col-lg-3 no-padding light-gray download visible-lg">
                         <a href="resume.php">

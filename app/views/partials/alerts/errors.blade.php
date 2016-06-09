@@ -1,14 +1,9 @@
 	{{-- show errors in alert box --}}
 	@if (Session::has('errorMessage'))
-	    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-	@endif
-	@if($errors->has())
-
-		<div class="alert alert-danger" role="alert">
-			<ul>
-				@foreach($errors->all() as $error)
-					<li>{{ $error }}</li>
-				@endforeach
-			</ul>
-		</div>
+	    <div class="error">
+	    	<h6>{{ Session::get('errorMessage') }}</h6>
+			@foreach($errors->all() as $error)
+				<h6>{{ $error }}</h6>
+			@endforeach
+	    </div>
 	@endif
