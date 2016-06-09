@@ -32,17 +32,7 @@
                   </div>
 
                   <div class="row">
-                      <section class="cd-intro">
-                     <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
-                        <span>Web </span>
-                        <span class="cd-words-wrapper">
-                           <b class="is-visible">Designer</b>
-                           <b>Developer</b>
-                        </span>
-                     </h4>
-                  </section>
-
-
+                      
                      <div class="col-lg-3 no-padding light-gray download visible-lg">
                         <a href="resume.php">
                         <span class="fa fa-download center-4em icon"></span>
