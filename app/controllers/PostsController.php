@@ -67,9 +67,9 @@ class PostsController extends \BaseController {
 				if(Input::hasFile('img')) {
 					$img = Input::file('img');
 					$imgName = $post->id . '.' . $img->getClientOriginalExtension();
-					$systemPath = public_path() . '/img';
+					$systemPath = public_path() . '/uploads';
 					$img->move($systemPath , $imgName);
-					$post->img_url = '/img/' . $imgName;
+					$post->img_url = '/uploads/' . $imgName;
 					$post->save();
 				}
 				Session::flash('successMessage', 'Your new post: "' . $post->title . '" was successfully created.');
@@ -129,9 +129,9 @@ class PostsController extends \BaseController {
             if(Input::hasFile('img')) {
                 $img = Input::file('img');
                 $imgName = $post->id . '.' . $img->getClientOriginalExtension();
-                $systemPath = public_path() . '/img';
+                $systemPath = public_path() . '/uploads';
                 $img->move($systemPath , $imgName);
-                $post->img_url = '/img/' . $imgName;
+                $post->img_url = '/uploads/' . $imgName;
             }
             $post->save();
             Session::flash('successMessage', 'Your post "' . $post->title . '" was successfully updated.');
