@@ -32,7 +32,10 @@
                   </div>
 
                   <div class="row">
-                      
+                      <div class="col-lg-9 col-xs-12 title full-stack-title full-stack-row" id="full_stack_title">
+                           Web Developer
+                     </div>
+                     
                      <div class="col-lg-3 no-padding light-gray download visible-lg">
                         <a href="resume.php">
                         <span class="fa fa-download center-4em icon"></span>
