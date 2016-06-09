@@ -178,3 +178,8 @@ main {
     color: #b30000;
     box-shadow: inset 0 0 10px #b30000;
 }
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 90px;
+    line-height: 90px;
+}
