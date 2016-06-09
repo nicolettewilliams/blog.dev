@@ -16,7 +16,6 @@
             </ul>
         @else
             <li>{{ HTML::link('/login', 'Log In', ['class' => 'navbar-links']) }}</li>   
-            <li>{{ HTML::link('/signup', 'Sign Up', ['class' => 'navbar-links signup']) }}</li>   
         @endif
 
 
