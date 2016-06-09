@@ -14,17 +14,19 @@
 		
 	    <p class="show-body">{{{ $post['body'] }}}</p>
 	<div>
-	@if($post->user_id == Auth::user()->id)
-	<button class="btn purple darken-3 float-left submit"><a class="navbar-links" href="{{ route('posts.edit', $post->id) }}">EDIT</a></button>
-	@endif
-	    {{ Form::open([
-	        'method' => 'DELETE',
-	        'route' => ['posts.destroy', $post->id]
-	    ]) }}
+	@if(Auth::check())
+		@if($post->user_id == Auth::user()->id)
+			<button class="btn purple darken-3 float-left submit"><a class="navbar-links" href="{{ route('posts.edit', $post->id) }}">EDIT</a></button>
+		    {{ Form::open([
+		        'method' => 'DELETE',
+		        'route' => ['posts.destroy', $post->id]
+		    ]) }}
 
-	        {{ Form::submit('DELETE', ['class' => 'btn purple darken-3 submit']) }}
-	        
-	    {{ Form::close() }}
+		        {{ Form::submit('DELETE', ['class' => 'btn purple darken-3 submit']) }}
+		        
+		    {{ Form::close() }}
+		@endif
+	@endif
 	</div>
 
 	<div class="back-to-home">
