@@ -54,7 +54,7 @@
                      </a>
                      
 
-                     <a href="test.pdf" class="col-lg-3 col-xs-6 no-padding blue center-4em">
+                     <a href="/resume" class="col-lg-3 col-xs-6 no-padding blue center-4em">
                         <span class="fa fa-file-text icon"></span>
                         <p class="small-text icon-text">resume</p>
                      </a>

@@ -67,5 +67,5 @@ Route::post('login', 'HomeController@doLogin');
 
 Route::get('logout', 'HomeController@doLogout');
 
-Route::get('signup', 'HomeController@showSignup');
+Route::get('resume', 'HomeController@showResume');
 

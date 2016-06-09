@@ -20,6 +20,10 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+	public function showResume() {
+	   return View::make('resume');
+	}
+	
 	public function showLogin()
 	{
 		return View::make('posts.login');
@@ -43,7 +47,4 @@ class HomeController extends BaseController {
 		return Redirect::to('login');
 	}
 
-	public function showSignup() {
-	   return View::make('posts.signup');
-	}
 }
