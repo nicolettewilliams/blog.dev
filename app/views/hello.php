@@ -12,6 +12,9 @@
    
    <link rel="stylesheet" type="text/css" href="/css/resume.css">
 
+   <link rel="icon" type="image/png" href="../img/handlizard.png">
+
+
 <body>
 
    <div class="container">
