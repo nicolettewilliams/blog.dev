@@ -4,9 +4,7 @@
 <div class="container">
     <p class="titles">{{{ $post['title'] }}}</p>
     @include('partials.alerts.errors')
-    @if (Session::has('successMessage'))
-        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-    @endif
+    @include('partials.alerts.success')
 	<p class="center post-by"><i class="fa fa-clock-o" aria-hidden="true"></i></span>  {{ $post->created_at->setTimezone('America/Chicago')->diffForHumans() }} by {{ $post->user->firstname }} {{ $post->user->lastname }}</p>
 	@unless(empty($post->img_url))
 		<img class="img-resize float-left" src="{{{$post->img_url}}}" alt="">
@@ -31,6 +29,9 @@
 
 	<div class="back-to-home">
 		<a href="{{ route('posts.index') }}">Back to all posts</a>
+	</div>
+
+	<div class="clear">
 	</div>
 	
 </div>

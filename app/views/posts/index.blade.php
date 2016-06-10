@@ -5,9 +5,7 @@
 <div class="container center">
 
     <p class="padding titles">All Posts</p>
-    @if (Session::has('successMessage'))
-        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-    @endif
+    @include('partials.alerts.success')
     @foreach($posts as $post)
         <article>
             <h3><a href="{{{ action('PostsController@show', $post->id) }}}" class="post-title">{{{$post->title}}}</a></h3>
