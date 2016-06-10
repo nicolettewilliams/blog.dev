@@ -20,14 +20,15 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
-	public function showResume() {
-	   return View::make('resume');
+	public function showPortfolio() {
+	   return View::make('portfolio');
 	}
 	
 	public function showLogin()
 	{
 		return View::make('posts.login');
 	}
+	
 	public function doLogin()
 	{
 		$email = Input::get('email');

@@ -62,7 +62,7 @@ Route::post('login', 'HomeController@doLogin');
 
 Route::get('logout', 'HomeController@doLogout');
 
-Route::get('resume', 'HomeController@showResume');
+Route::get('portfolio', 'HomeController@showPortfolio');
 
 URL::to('Resume.pdf');
 
