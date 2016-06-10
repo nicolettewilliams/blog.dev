@@ -64,3 +64,5 @@ Route::get('logout', 'HomeController@doLogout');
 
 Route::get('resume', 'HomeController@showResume');
 
+URL::to('Resume.pdf');
+
