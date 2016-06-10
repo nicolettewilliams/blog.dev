@@ -18,7 +18,7 @@
 
 	<div class="container">
 		<div class="squirrel">
-			<img class="img-resize" src="../img/squirrel.png">
+			<img class="img-resize" src="../img/Squirrel.png">
 			<h3 class="title">Get The Squirrel's Nuts</h3>
 			<p class="game-description">Get The Squirrel's Nuts is my version of Whack-A-Mole. The objective of the game is to take as many of the squirrel's nuts as you can by 'grabbing' the squirrel. This site is designed for desktops and laptops.</p>
 			<a class="game-description" href="http://nicolettewilliams.github.io/WhackAMole.html">Click to play!</a>
