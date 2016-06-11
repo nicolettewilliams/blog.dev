@@ -1,6 +1,5 @@
 <?php
 
-header("Content-disposition: attatchment;
-    filename=test.pdf");
+header("Content-disposition: attachment;filename=Resume.pdf;");
 header("Content-type: application/pfd");
-readfile("test.pdf");
+readfile("Resume.pdf");
