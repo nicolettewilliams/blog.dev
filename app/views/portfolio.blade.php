@@ -17,6 +17,15 @@
 <body>
 
 	<div class="container">
+		<div class="codingkids">
+			<img class="img-resize" src="../img/codingkids.png">
+			<h3 class="title">Coding Kids</h3>
+			<p class="game-description">Coding Kids is a coding tutorial site developed and geared towards children between the ages of 6-10 years old. The idea is to introduce a skill to children at an earlier age in which they can grow and build from. </p>
+			<a class="game-description" href="http://codingkids.xyz">Click to view site!</a>
+		</div>
+
+		<div class="clearboth"></div>
+
 		<div class="squirrel">
 			<img class="img-resize" src="../img/Squirrel.png">
 			<h3 class="title">Get The Squirrel's Nuts</h3>
@@ -35,7 +44,17 @@
 
 		<div class="clearboth"></div>
 
+		<div class="adlister">
+			<img class="img-resize" src="../img/adlister.png">
+			<h3 class="title">Ad Lister</h3>
+			<p class="game-description">Ad Lister is my version of Craigslist. You can sign up and create ads, as well as look for stuff you would like to buy.</p>
+		</div>
+
+		<div class="clearboth"></div>
+
+
 	<a href="/">Back To Homepage</a>
+	<div class="clearboth"></div>
 	</div>
 
 </body>
