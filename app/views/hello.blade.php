@@ -101,6 +101,11 @@
       <div class="row last-row">
          <div class="col-lg-6 col-sm-6 follow-me">
             Create by: Nicolette Williams
+
+            <div>Follow me on: 
+               <a href="https://github.com/nicolettewilliams"><i class="fa fa-github" aria-hidden="true"></i></a>
+               <a href="https://www.linkedin.com/in/nicolette-williams-74aa8111a"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>   
          </div>
       </div>
    </div>
