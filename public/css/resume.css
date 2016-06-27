@@ -17,12 +17,11 @@ body {
     padding-top: 15px;
 }
 
-/*.aboutme{
-    height: 200px;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-}*/
+.about{
+    font-size: 20px;
+    height: 213px;
+    padding-top: 20px;
+}
 
 .title{
     background-color: #777;

@@ -85,8 +85,8 @@
          <div class="col-lg-8 no-padding">
             <p class="center-4em titles-and-content">about me</p>
 <!--             <img class="aboutme" src="/img/aboutme.jpg">
- -->            <p class="about small-text titles-and-content content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+ -->            <p class="about titles-and-content content">
+                  I'm Nicolette Williams. Most people call me Niki. I'm a full-stack developer. I love working with startups and enjoy the challenges of crafting beautiful and intuitive experiences out of seemingly complex interactions. However, the things I am most proud of aren't produced in code or Photoshop. I live in Texas with my two beautiful children, a boy, and a girl. And of course my awesome husband.
             </p>
          </div>
 
@@ -95,25 +95,6 @@
             <p class="personal-info"><span class="info-title">name:    nicolette williams</span></p>
             <p class="personal-info"><span class="info-title">cell:    210.605.4797</span></p>
             <p class="personal-info"><span class="info-title">email: nicolette.williams8@icloud.com</span></p>
-         </div>
-      </div>
-
-      <div class="row">
-         <div class="col-lg-8 no-padding">
-            <p class="center-4em purple2 pro-exp-title">past experience</p>
-            <p class="small-text purple2 content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p> 
-            <p class="small-text purple2 content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.
-            </p> 
-         </div>
-
-         <div class="col-lg-4 no-padding">
-            <p class="center-4em blue2 pro-skills-title">professional skills</p>
-            <p class="small-text blue2 content pro-skills-content">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet
-            </p>
          </div>
       </div>
 
