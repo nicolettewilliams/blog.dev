@@ -12,6 +12,7 @@ body {
 
 .myfam{
     height: 200px;
+    float: left;
 }
 
 .name{
