@@ -86,7 +86,7 @@
             <p class="center-4em titles-and-content">about me</p>
 <!--             <img class="aboutme" src="/img/aboutme.jpg">
  -->            <p class="about titles-and-content content">
-                  <img class="myfam" src="../public/img/myfam.jpg">
+                  <img class="myfam" src="../img/myfam.jpg">
                   I'm Nicolette Williams. Most people call me Niki. I'm a full-stack developer. I live in Texas with my two beautiful children, a boy, and a girl. And of course my awesome husband.
             </p>
          </div>
