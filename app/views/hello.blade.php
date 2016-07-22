@@ -84,10 +84,9 @@
       <div class="row">
          <div class="col-lg-8 no-padding">
             <p class="center-4em titles-and-content">about me</p>
-<!--             <img class="aboutme" src="/img/aboutme.jpg">
- -->            <p class="about titles-and-content content">
-                  <img class="myfam" src="../img/myfam.jpg">
-                  I'm Nicolette Williams. Most people call me Niki. I'm a full-stack developer. I live in Texas with my two beautiful children, a boy, and a girl. And of course my awesome husband.
+            <span class="myfam"> <img class="myfampic" src="../img/myfam.jpg"></span>
+            <p class="about titles-and-content content">
+                  I'm Nicolette Williams. Most people call me Niki. I'm a Full Stack Developer. I live in Texas with my two beautiful children, a girl, and a boy. And of course my awesome husband.
             </p>
          </div>
 
