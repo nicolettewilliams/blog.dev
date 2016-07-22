@@ -36,7 +36,7 @@
 
                   <div class="row">
                       <div class="col-lg-9 col-xs-12 title full-stack-title full-stack-row" id="full_stack_title">
-                           Web Developer
+                           Full Stack Developer
                      </div>
 
                      <div class="col-lg-3 no-padding light-gray download visible-lg">
@@ -115,7 +115,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script src="js/resume.js"></script> 
-
+{{-- <script src="js/resume.js"></script> 
+ --}}
 </body>
 </html>
