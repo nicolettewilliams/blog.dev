@@ -10,6 +10,10 @@ body {
     cursor: default;
 }
 
+.myfam{
+    height: 780px;
+}
+
 .name{
     background-color: gray;
     font-size: 4em;
