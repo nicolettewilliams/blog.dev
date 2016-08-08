@@ -67,4 +67,4 @@ Route::get('portfolio', 'HomeController@showPortfolio');
 URL::to('Resume.pdf');
 
 Route::get('testing' , 'PostsController@testing');
-Route::get('sendEmail' , 'PostsController@sendEmail');
+Route::put('sendTheEmail' , 'PostsController@sendTheEmail');
