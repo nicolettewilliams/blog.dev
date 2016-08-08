@@ -152,7 +152,7 @@ class PostsController extends \BaseController {
 		return Redirect::action('PostsController@index');
 	}
 
-	public function test(){
+	public function testing(){
 		return View::make('posts.testing');
 	}
 
