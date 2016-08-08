@@ -25,7 +25,7 @@
  
 </form>
 
-<form class="form-horizontal" role="form" method="post" action="/sendEmail">
+{{ Form::open(array('action' => 'PostsController@sendEmail')) }}
     <div class="form-group">
         <label for="first_name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
