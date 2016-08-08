@@ -67,4 +67,4 @@
             <! Will be used to display an alert to the user>
         </div>
     </div>
-</form>
+{{ Form::close() }}
