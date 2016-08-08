@@ -66,3 +66,9 @@ Route::get('portfolio', 'HomeController@showPortfolio');
 
 URL::to('Resume.pdf');
 
+Route::get("/", function() {
+    ob_start();
+    require(path("public")."testing.php");
+    return ob_get_clean();
+});
+
