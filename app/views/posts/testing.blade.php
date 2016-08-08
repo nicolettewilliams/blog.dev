@@ -1,6 +1,6 @@
 
 
-{{ Form::open(array('action' => 'PostsController@sendEmail')) }}
+{{ Form::open(array('action' => 'PostsController@sendTheEmail')) }}
     <div class="form-group">
         <label for="first_name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
