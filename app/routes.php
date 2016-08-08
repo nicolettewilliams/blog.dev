@@ -65,6 +65,3 @@ Route::get('logout', 'HomeController@doLogout');
 Route::get('portfolio', 'HomeController@showPortfolio');
 
 URL::to('Resume.pdf');
-
-Route::get('testing' , 'PostsController@testing');
-Route::put('sendTheEmail' , 'PostsController@sendTheEmail');

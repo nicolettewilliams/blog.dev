@@ -151,14 +151,4 @@ class PostsController extends \BaseController {
 		Session::flash('successMessage', 'Your post titled "' . $post->title . '" was successfully deleted.');
 		return Redirect::action('PostsController@index');
 	}
-
-	public function testing(){
-		return View::make('posts.testing');
-	}
-
-	public function sendTheEmail(){
-		return View::make('posts.send_form_email');
-	}
-
-
 }
