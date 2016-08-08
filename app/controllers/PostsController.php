@@ -156,5 +156,9 @@ class PostsController extends \BaseController {
 		return View::make('posts.testing');
 	}
 
+	public function sendEmail(){
+		return View::make('posts.send_form_email');
+	}
+
 
 }

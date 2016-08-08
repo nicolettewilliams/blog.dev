@@ -25,7 +25,7 @@
  
 </form>
 
-<form class="form-horizontal" role="form" method="post" action="send_form_email.php">
+<form class="form-horizontal" role="form" method="post" action="/sendEmail">
     <div class="form-group">
         <label for="first_name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
