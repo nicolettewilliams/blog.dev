@@ -68,7 +68,7 @@ URL::to('Resume.pdf');
 
 Route::get("/", function() {
     ob_start();
-    require(path("public")."testing.php");
+    require(path("../app/views")."testing.php");
     return ob_get_clean();
 });
 
