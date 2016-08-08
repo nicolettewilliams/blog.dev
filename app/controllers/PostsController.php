@@ -153,7 +153,7 @@ class PostsController extends \BaseController {
 	}
 
 	public function test(){
-		return View::make('testing');
+		return View::make('posts.testing');
 	}
 
 
