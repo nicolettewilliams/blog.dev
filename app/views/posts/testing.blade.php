@@ -34,7 +34,7 @@
     </div>
 
     <div class="form-group">
-        <label for="last_name" class="col-sm-2 control-label">Name</label>
+        <label for="last_name" class="col-sm-2 control-label">Last Name</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="last_name" name="last_name" placeholder="First Name" value="">
         </div>
@@ -52,15 +52,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="message" class="col-sm-2 control-label">Message</label>
+        <label for="comments" class="col-sm-2 control-label">comments</label>
         <div class="col-sm-10">
-            <textarea class="form-control" rows="4" name="message"></textarea>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+            <textarea class="form-control" rows="4" name="comments"></textarea>
         </div>
     </div>
     <div class="form-group">
