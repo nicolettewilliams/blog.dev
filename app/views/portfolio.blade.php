@@ -17,6 +17,16 @@
 <body>
 
 	<div class="container">
+		<div class="bluestar">
+			<img class="img-resize" src="../img/bluestar.png">
+			<h3 class="title">Blue Star Coloring</h3>
+			<p class="game-description">Blue Star Coloring is an Adult Coloring Book Company that launched in 2015. They have quickly grown into a troupe of creative, talented publishers dedicated to a simple mission. Blue Star collaborates with independent illustrators to develop new books.</p>
+			<a class="game-description" href="http://bluestarcoloring.com">Click to view site!</a>
+		</div>
+
+		<div class="clearboth"></div>
+
+
 		<div class="codingkids">
 			<img class="img-resize" src="../img/codingkids.png">
 			<h3 class="title">Coding Kids</h3>
