@@ -17,9 +17,9 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div id="preloader">
+{{--     <div id="preloader">
         <div id="status"> <img src="../img/preloader.gif" height="64" width="64" alt=""> </div>
-    </div>
+    </div> --}}
     @yield('content')
 
     @include('partials.footer')
