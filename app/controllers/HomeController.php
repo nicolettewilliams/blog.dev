@@ -19,33 +19,5 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
-
-	public function showPortfolio() {
-	   return View::make('portfolio');
-	}
 	
-	public function showLogin()
-	{
-		return View::make('posts.login');
-	}
-	
-	public function doLogin()
-	{
-		$email = Input::get('email');
-		$password = Input::get('password');
-		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
-		    return Redirect::intended('/posts');
-		} else {
-			Session::flash('errorMessage', 'Incorrect email or password. Please try again.');
-		    return Redirect::action('HomeController@showLogin');
-		}
-	}
-
-	//GET
-	public function doLogout()
-	{
-		Auth::logout();
-		return Redirect::to('login');
-	}
-
 }
