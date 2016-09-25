@@ -1,0 +1,203 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Muli';
+    background: url(/img/dark_embroidery.png) center fixed;
+    padding: 0px !important;
+}
+
+main {
+    flex: 1 0 auto;
+    font-family: 'Muli';
+}
+
+.container{
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.post-by{
+    font-weight: bolder;
+}
+
+.img-placeholder{
+	padding-bottom: 30px;
+}
+
+.titles{
+	font-family: 'Lobster', cursive;
+	font-size: 60px;
+	color: #9400D3;
+    padding-top: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+.brand-logo{
+    font-size: 4rem;
+    position: absolute;
+}
+
+/* unvisited link */
+.navbar-links:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+.navbar-links:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.navbar-links:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+.navbar-links:active {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-title{
+	font-family: 'Amatic SC', cursive;
+	color: white;
+}
+
+.post-title:link{
+	font-size: 40px;
+    color: #9400D3;
+    font-family: 'Luckiest Guy', cursive;
+}
+.post-title:visited {
+    color: #9400D3;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.post-title:hover {
+    color: #9400D3;
+    text-decoration: underline;
+}
+
+.user-posts:link{
+    color: #9400D3;
+}
+
+.user-posts:visited{
+    color: #9400D3;
+}
+
+.padding{
+	padding-left: 50px;
+    padding-right: 50px;
+}
+
+.back-to-home{
+    padding-top: 20px;
+    padding-bottom: 30px
+}
+
+.float-left{
+    float: left;
+    margin-right: 20px;
+}
+
+.show-body{
+    word-wrap: break-word;
+}
+
+.img-resize{
+    width: 350px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.submit{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.dropdown-button{
+    margin-right: 40px;
+    border: none;
+    letter-spacing: none;
+    text-transform: none;
+    box-shadow: none;
+}
+
+.purple-text{
+   color: #9400D3;
+    font-size: 10px;
+}
+
+.current-photo{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: #9400D3;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+.img-resize-edit{
+    width: 200px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.signup{
+    margin-right: 40px;
+}
+
+.center{
+    text-align: center;
+}
+
+.pagination li.active {
+    background-color: #9400D3;
+}
+
+.pagination{
+    padding-bottom: 5px;
+}
+
+.error{
+    background-color: #ff9999;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 7px;
+    color: #b30000;
+    box-shadow: inset 0 0 10px #b30000;
+}
+
+.success{
+    background-color: #98FB98;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 7px;
+    color: #006400;
+    box-shadow: inset 0 0 10px #228B22;
+}
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 90px;
+    line-height: 90px;
+}
+
+.loginbut{
+    margin-right: 50px;
+}
+
+.clear{
+    clear: both;
+}
