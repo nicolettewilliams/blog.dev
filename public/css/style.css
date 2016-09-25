@@ -440,7 +440,7 @@ ol.type li a:hover {
 /* Resume Section */
 #resume{
 	background: #444D60;
-	height: 150px;
+	height: 300px;
 }
 #resume:hover{
 	background: #2F3943;
@@ -448,7 +448,7 @@ ol.type li a:hover {
 }
 .resume-link{
 	color: #FFF;
-	padding-top: 30px;
+	padding-top: 100px;
 }
 .resume-link:hover{
 	color: #FFF;
@@ -457,7 +457,7 @@ ol.type li a:hover {
 
 /* Contact Section */
 #contact {
-	padding: 120px 0 40px 0;
+	padding: 160px 0 160px 0;
 	background: #FFF;
 }
 #contact .contact-item {
