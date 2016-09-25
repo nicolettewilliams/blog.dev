@@ -25,7 +25,7 @@
       <hr>
     </div>
     <div class="row">
-      <div class="col-md-5"><img src="img/about.jpg" class="img-responsive"></div>
+      <div class="col-md-5"><img src="../img/about.jpg" class="img-responsive"></div>
       <div class="col-md-7">
         <div class="about-text">
           <h4>Hey! I'm Nicolette</h4>
@@ -95,7 +95,7 @@
               <div class="hover-text">
                 <h4>President Obama Book</h4>
               </div>
-              <img src="img/portfolio/obama.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/obama.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -104,7 +104,7 @@
               <div class="hover-text">
                 <h4>Blue Star Coloring</h4>
               </div>
-              <img src="img/portfolio/bluestar.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/bluestar.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -113,7 +113,7 @@
               <div class="hover-text">
                 <h4>Coding Kids</h4>
               </div>
-              <img src="img/portfolio/codingkids.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/codingkids.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -122,7 +122,7 @@
               <div class="hover-text">
                 <h4>Whack-A-Mole</h4>
               </div>
-              <img src="img/portfolio/squirrel.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/squirrel.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -131,7 +131,7 @@
               <div class="hover-text">
                 <h4>Bullnanza Bulldogges</h4>
               </div>
-              <img src="img/portfolio/dog.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/dog.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -140,7 +140,7 @@
               <div class="hover-text">
                 <h4>Simple Simon</h4>
               </div>
-              <img src="img/portfolio/simon.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/simon.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -149,7 +149,7 @@
               <div class="hover-text">
                 <h4>Coming Soon</h4>
               </div>
-              <img src="img/portfolio/soon.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/soon.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -158,7 +158,7 @@
               <div class="hover-text">
                 <h4>Coming Soon</h4>
               </div>
-              <img src="img/portfolio/soon.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="../img/portfolio/soon.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
       </div>
