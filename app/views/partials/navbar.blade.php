@@ -1,42 +1,20 @@
-       
-<nav>
-   	<div class="nav-wrapper purple darken-3">
-      	<span class="padding"><i class="fa fa-hand-lizard-o brand-logo" aria-hidden="true"></i></span>
-      	<a href="{{{ action('PostsController@index') }}}" class="brand-logo blog-title navbar-links"><span>It's A Blog, Dude!</span></a>
-      	<ul class="right hide-on-med-and-down">
-
-
-      	@if(Auth::check())
-            <a class='dropdown-button btn purple darken-3' href='#' data-activates='dropdown1'>Hello, {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->firstname }}} </a>
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a class="purple-text" href="{{{ action('PostsController@create') }}}">Write a Post!</a></li>
-                <li><a class="purple-text" href="{{ URL::to('/my_posts' , Auth::user()->id) }}">All of Your Posts</a></li>
-                <li class="divider"></li>
-                <li><a class="purple-text" href="{{ URL::to('logout') }}">Logout</a></li>
-            </ul>
-        @else
-            <li>{{ HTML::link('/login', 'Log In', ['class' => 'navbar-links loginbut']) }}</li>   
-        @endif
-
-
-    </ul>
-
-   </div>
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"> Nicolette Williams</a> </div>
+    
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li class="hidden"> <a href="#page-top"></a> </li>
+        <li> <a class="page-scroll" href="#about">About</a> </li>
+        <li> <a class="page-scroll" href="#services">Services</a> </li>
+        <li> <a class="page-scroll" href="#works">Portfolio</a> </li>
+        <!-- <li> <a class="page-scroll" href="#testimonials">Testimonials</a> </li> -->        
+        <li> <a class="page-scroll" href="#resume">Resume</a> </li>
+        <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+      </ul>
+    </div>
+  </div>
 </nav>
-
-
-
-<script>
-    $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrain_width: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: false, // Displays dropdown below the button
-      alignment: 'left' // Displays dropdown with edge aligned to the left of button
-    }
-  );
-</script>
-
-
