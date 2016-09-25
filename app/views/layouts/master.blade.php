@@ -21,14 +21,9 @@
     <div id="preloader">
         <div id="status"> <img src="../img/preloader.gif" height="64" width="64" alt=""> </div>
     </div>
-    <main>
     	@yield('content')
-	</main>
 
-    @include('partials.footer')
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script type="text/javascript" src="../js/bootstrap.js"></script> 
