@@ -100,29 +100,29 @@ function init() {
     initDone = true;
 
     // Checks if this script is running in a frame
-    if (top != self) {
-        isFrame = true;
-    }
+    // if (top != self) {
+    //     isFrame = true;
+    // }
 
-    /**
-     * This fixes a bug where the areas left and right to 
-     * the content does not trigger the onmousewheel event
-     * on some pages. e.g.: html, body { height: 100% }
-     */
-    else if (scrollHeight > windowHeight &&
-            (body.offsetHeight <= windowHeight || 
-             html.offsetHeight <= windowHeight)) {
+    // /**
+    //  * This fixes a bug where the areas left and right to 
+    //  * the content does not trigger the onmousewheel event
+    //  * on some pages. e.g.: html, body { height: 100% }
+    //  */
+    // else if (scrollHeight > windowHeight &&
+    //         (body.offsetHeight <= windowHeight || 
+    //          html.offsetHeight <= windowHeight)) {
 
-        html.style.height = 'auto';
-        setTimeout(refresh, 10);
+    //     html.style.height = 'auto';
+    //     setTimeout(refresh, 10);
 
-        // clearfix
-        if (root.offsetHeight <= windowHeight) {
-            var underlay = document.createElement("div"); 	
-            underlay.style.clear = "both";
-            body.appendChild(underlay);
-        }
-    }
+    //     // clearfix
+    //     if (root.offsetHeight <= windowHeight) {
+    //         var underlay = document.createElement("div"); 	
+    //         underlay.style.clear = "both";
+    //         body.appendChild(underlay);
+    //     }
+    // }
 
     // disable fixed background
     if (!options.fixedBackground && !isExcluded) {
