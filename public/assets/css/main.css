@@ -5977,62 +5977,8 @@ img.mfp-img {
     padding-bottom: 0;
   }
 }
-/* --------------------- */
-/* CONTACT FORM
-/* --------------------- */
-.contact-form {
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 12px;
-  margin-bottom: 7px;
-  min-height: 3em;
-  border: none;
-  background-color: #f2f2f2;
-}
-.contact-form .form-group {
-  margin-bottom: 0;
-}
-.contact-form textarea {
-  width: 100%;
-  display: block;
-  padding: 14px;
-  min-height: 130px;
-}
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-  outline: none;
-}
-.contact-form .alert,
-.contact-form label {
-  display: none;
-}
-@media screen and (max-width: 480px) {
-  .contact-form .btn-primary {
-    width: 100%;
-  }
+.contact-title{
+  padding-top: 100px;
 }
 
 /* ------------------ TWITTER STREAM ------------------ */
